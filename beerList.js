@@ -1,13 +1,17 @@
 function getBeers(x) {
-  if (x == "next") {
+  if (x === "next") {
     page++;
-    document.getElementById("beer-list__results").innerHTML = "";
+    resetList();
   }
-  if (x == "prev") {
+  if (x === "prev") {
     if (!(page === 1)) {
       page--;
-      document.getElementById("beer-list__results").innerHTML = "";
     }
+    resetList();
+  }
+  if (x === "limit") {
+    perPage = document.getElementById("beer-list__item-limit").value;
+    resetList();
   }
   fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=${perPage}`)
     .then(res => res.json())
@@ -22,6 +26,10 @@ function getBeers(x) {
       });
     })
     .catch(error => console.log(error));
+}
+
+function resetList() {
+  document.getElementById("beer-list__results").innerHTML = "";
 }
 
 function throttle(func, limit) {
@@ -40,12 +48,23 @@ let perPage = 9;
 getBeers();
 let getList = throttle(getBeers, 500);
 
-document.getElementById("prev").addEventListener("click", () => {
-  let x = "prev";
-  getList(x);
-});
+document
+  .getElementById("beer-list__pagination-prev")
+  .addEventListener("click", () => {
+    let x = "prev";
+    getList(x);
+  });
 
-document.getElementById("next").addEventListener("click", () => {
-  let x = "next";
-  getList(x);
-});
+document
+  .getElementById("beer-list__pagination-next")
+  .addEventListener("click", () => {
+    let x = "next";
+    getList(x);
+  });
+
+document
+  .getElementById("beer-list__item-limit")
+  .addEventListener("change", () => {
+    let x = "limit";
+    getList(x);
+  });

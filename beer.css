@@ -6,17 +6,23 @@
   font-family: "Pacifico", cursive;
 }
 
-#pagination {
+#beer-list__item-limit {
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+#beer-list__pagination {
   text-align: center;
 }
 
-#pagination ul {
+#beer-list__pagination ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#pagination ul li {
+#beer-list__pagination ul li {
   display: inline-block;
   padding: 8px 0px;
 }

@@ -21,10 +21,16 @@
     </nav>
     <section class="beer-list">
       <h1 class="beer-list__header">B e e r L i s t</h1>
-      <nav id="pagination">
+      <select id="beer-list__item-limit">
+        <option value="3">Three</option>
+        <option value="6">Six</option>
+        <option value="9" selected>Nine</option>
+        <option value="12">Twelve</option>
+      </select>
+      <nav id="beer-list__pagination">
         <ul>
-          <li id="prev" class="pagination__link">Prev</li>
-          <li id="next" class="pagination__link">Next</li>
+          <li id="beer-list__pagination-prev" class="pagination__link">Prev</li>
+          <li id="beer-list__pagination-next" class="pagination__link">Next</li>
         </ul>
       </nav>
       <div id="beer-list__results"></div>
