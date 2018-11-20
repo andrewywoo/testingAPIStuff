@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Beer List</title>
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="beer.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Weather</a></li>
+        <li><a href="beer.html">Beer</a></li>
+      </ul>
+    </nav>
+    <section class="beer-list">
+      <h1 class="beer-list__header">B e e r L i s t</h1>
+      <nav id="pagination">
+        <ul>
+          <li id="prev" class="pagination__link">Prev</li>
+          <li id="next" class="pagination__link">Next</li>
+        </ul>
+      </nav>
+      <div id="beer-list__results"></div>
+    </section>
+  </body>
+  <script src="beerList.js"></script>
+</html>
