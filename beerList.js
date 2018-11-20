@@ -20,7 +20,12 @@ function getBeers(x) {
         document.getElementById("beer-list__results").innerHTML += `
               <ul class="beer">
                   <li class="beer-name">${beer.name}</li>
-                  <li class="beer-description">${beer.description}</li>
+                  <ul class="beer-info">
+                    <li class="beer-image"><img class="beer-img" src="${
+                      beer.image_url
+                    }" /></li>
+                    <li class="beer-description">${beer.description}</li>
+                  </ul>
               </ul>
               `;
       });
