@@ -1,4 +1,4 @@
-#main-area {
+#main-test-area {
   display: grid;
   grid-template-columns: repeat(4, 25%);
 }
@@ -20,8 +20,6 @@
   width: 80px;
   height: 150px;
   background: purple;
-  grid-column-start: 2;
-  grid-row-start: 1;
 }
 .el5 {
   width: 80px;
@@ -31,4 +29,46 @@
 .el6 {
   width: 300px;
   background: grey;
+}
+
+#layout-practice {
+  width: 1000px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 15% 70% 15%;
+}
+#layout-practice div {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  margin: 0.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+}
+.main-content {
+  margin: 0.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.sidebar {
+  margin: 0.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.footer {
+  margin: 0.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 3;
 }
