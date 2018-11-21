@@ -1,0 +1,34 @@
+#main-area {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.el1 {
+  width: 300px;
+  background: green;
+}
+
+.el2 {
+  width: 100px;
+  background: blue;
+}
+.el3 {
+  width: 250px;
+  background: pink;
+}
+.el4 {
+  width: 80px;
+  height: 150px;
+  background: purple;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.el5 {
+  width: 80px;
+  height: 150px;
+  background: brown;
+}
+.el6 {
+  width: 300px;
+  background: grey;
+}
